@@ -1,0 +1,169 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to top right, purple, blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+.container {
+  border: none;
+  height: 400px;
+  width: 300px;
+  position: relative;
+  background: #eee;
+  border-radius: 20px;
+  transition: .5s;
+  overflow: hidden;
+}
+
+.container.active {
+  height: 350px;
+}
+
+.container.active.a {
+  height: 430px;
+}
+
+.container .title {
+  text-transform: uppercase;
+  font-family: cursive;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 20px;
+  font-size: 23px;
+  letter-spacing: 2px;
+  color: rebeccapurple;
+}
+
+.page01 {
+  display: grid;
+  grid-auto-rows: 50px;
+  align-items: center;
+  gap: 40px;
+  width: 99%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  padding-top: 70px;
+  transition: .35s;
+}
+
+.page01.active {
+  transform: translateX(-300px)
+}
+
+.btnCont {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.next {
+  background: rebeccapurple;
+  font-size: 15px;
+  padding: 10px 25px;
+  color: #eee;
+  font-weight: 600;
+  border: none;
+  border-radius: 49px;
+}
+
+.previous {
+  background: rgba(200, 200, 200, .6);
+  font-size: 15px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.page01 p {
+  border: none;
+  padding: 15px;
+  font-family: monospace;
+}
+
+.page01 input {
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+
+.page02, .page03 {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(300px) scale(0);
+  padding-top: 70px;
+  display: grid;
+  grid-auto-rows: 50px;
+  align-items: center;
+  gap: 20px;
+  transition: .35s;
+}
+
+.page02.active {
+  transform: translateX(0);
+}
+
+.page02.active.a {
+  transform: translateX(-300px);
+}
+
+.page02 p {
+  font-family: monospace;
+  padding: 15px;
+  border: none;
+}
+
+.page02 input {
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+
+.page02 p label {
+  border: none;
+  display: inline-flex  ;
+  align-items: center;
+  justify-content: center;
+}
+
+.page03.active {
+  transform: translate(0)
+}
+
+.page03 p {
+  font-family: monospace;
+  padding: 15px;
+  border: none;
+}
+
+.page03 input {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid gray;
+}
